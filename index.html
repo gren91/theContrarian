@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Case Against Raising Interest Rates - 2026</title>
+    <title>The Contrarian - Financial Analysis & Market Research</title>
     <style>
         * {
             margin: 0;
@@ -25,7 +25,6 @@
             padding: 40px 20px 20px;
             border-top: 3px solid #000;
             border-bottom: 2px solid #000;
-            box-shadow: none;
         }
         
         .newspaper-masthead {
@@ -44,7 +43,7 @@
         }
         
         header h1 {
-            font-size: 3.2em;
+            font-size: 3.5em;
             margin-bottom: 8px;
             font-weight: 700;
             letter-spacing: 0.02em;
@@ -86,156 +85,107 @@
             padding-bottom: 8px;
         }
         
-        .argument-grid {
+        .intro-box p {
+            margin-bottom: 15px;
+            font-size: 1em;
+        }
+        
+        .articles-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 20px;
+            gap: 25px;
             margin-bottom: 40px;
         }
         
         @media (max-width: 768px) {
-            .argument-grid {
+            .articles-grid {
                 grid-template-columns: 1fr;
             }
         }
         
-        .argument-card {
+        .article-card {
             background: white;
-            padding: 20px;
+            padding: 0;
             border-radius: 0;
             box-shadow: none;
-            border: 1px solid #ddd;
+            border: 2px solid #000;
             transition: none;
+            overflow: hidden;
         }
         
-        .argument-card:hover {
-            transform: none;
-            box-shadow: none;
-            border: 1px solid #999;
+        .article-card:hover {
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
         
-        .argument-card h3 {
-            color: #000;
+        .article-header {
+            background: #000;
+            color: white;
+            padding: 20px;
+            border-bottom: 2px solid #000;
+        }
+        
+        .article-header h3 {
+            font-size: 1.6em;
+            margin-bottom: 8px;
+        }
+        
+        .article-body {
+            padding: 25px;
+        }
+        
+        .article-body p {
+            color: #333;
             margin-bottom: 15px;
-            font-size: 1.2em;
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 8px;
+            line-height: 1.7;
+            font-size: 0.95em;
         }
         
-        .argument-card .number {
+        .article-card .key-points {
+            background: #f5f1e8;
+            padding: 15px;
+            border-left: 3px solid #000;
+            margin: 15px 0;
+        }
+        
+        .article-card .key-points li {
+            margin-bottom: 8px;
+            margin-left: 20px;
+        }
+        
+        .article-link {
             display: inline-block;
             background: #000;
             color: white;
-            width: 35px;
-            height: 35px;
-            border-radius: 0;
-            text-align: center;
-            line-height: 35px;
-            font-weight: bold;
-            margin-right: 10px;
-            margin-bottom: 10px;
-            font-family: 'Georgia', serif;
-        }
-        
-        .argument-card p {
-            color: #333;
-            margin-bottom: 10px;
-            font-size: 0.95em;
-        }
-        
-        .key-stat {
-            background: #efefef;
-            padding: 12px 15px;
-            border-left: 3px solid #000;
-            margin: 15px 0;
-            font-weight: 500;
-            color: #222;
-        }
-        
-        .sources-section {
-            background: white;
-            padding: 30px;
-            border-radius: 0;
-            margin-top: 40px;
-            box-shadow: none;
-            border: 1px solid #ddd;
-        }
-        
-        .sources-section h2 {
-            color: #000;
-            margin-bottom: 25px;
-            border-bottom: 3px solid #000;
-            padding-bottom: 10px;
-            font-size: 1.6em;
-        }
-        
-        .source-item {
-            padding: 20px;
-            border-bottom: 1px solid #ddd;
-            margin-bottom: 15px;
-        }
-        
-        .source-item:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-        }
-        
-        .source-item h4 {
-            color: #000;
-            margin-bottom: 8px;
-            font-size: 1.1em;
+            padding: 12px 25px;
+            text-decoration: none;
             font-weight: 700;
+            margin-top: 15px;
+            transition: background 0.3s;
         }
         
-        .source-item p {
-            color: #555;
-            font-size: 0.95em;
-            margin-bottom: 8px;
+        .article-link:hover {
+            background: #333;
         }
         
-        .source-item .quote {
-            font-style: italic;
-            color: #333;
-            border-left: 4px solid #000;
-            padding-left: 15px;
-            margin: 10px 0;
-            background: #fafaf8;
-            padding: 10px 15px;
-        }
-        
-        .summary-box {
+        .about-box {
             background: #f0ebe3;
-            color: #1a1a1a;
-            padding: 30px;
+            padding: 25px;
+            border: 2px solid #000;
             border-radius: 0;
             margin-top: 30px;
-            border: 2px solid #000;
         }
         
-        .summary-box h3 {
+        .about-box h2 {
+            color: #000;
             margin-bottom: 15px;
             font-size: 1.5em;
             border-bottom: 2px solid #000;
-            padding-bottom: 10px;
+            padding-bottom: 8px;
         }
         
-        .summary-box ul {
-            list-style: none;
-        }
-        
-        .summary-box li {
+        .about-box p {
             margin-bottom: 12px;
-            padding-left: 25px;
-            position: relative;
-        }
-        
-        .summary-box li:before {
-            content: "▪";
-            position: absolute;
-            left: 0;
-            color: #000;
-            font-weight: bold;
-            font-size: 1.2em;
+            line-height: 1.7;
         }
         
         footer {
@@ -246,20 +196,6 @@
             margin-top: 40px;
             border-top: 2px solid #000;
             font-size: 0.85em;
-        }
-        
-        .data-source {
-            font-size: 0.85em;
-            color: #888;
-            margin-top: 8px;
-            font-style: italic;
-        }
-        
-        .highlight {
-            background: #fffacd;
-            padding: 2px 6px;
-            border-radius: 0;
-            font-weight: 600;
         }
         
         h1, h2, h3, h4 {
@@ -273,215 +209,69 @@
         <div class="newspaper-masthead">
             <p class="publication-date">Saturday, September 13, 2026</p>
         </div>
-        <h1>The Case Against<br>Raising Interest Rates</h1>
-        <p>Evidence-based analysis of why the Federal Reserve should hold rates steady in 2026</p>
+        <h1>The Contrarian</h1>
+        <p>Contrarian analysis of markets, policy, and finance</p>
     </header>
     
     <div class="container">
-        <div style="text-align: center; margin-bottom: 30px; padding: 15px; border-bottom: 1px solid #ddd;">
-            <span style="color: #666;">Interest Rates</span>
-            <span style="color: #ccc;">|</span>
-            <a href="crypto.html" style="text-decoration: none; color: #000; font-weight: 700; border-bottom: 2px solid transparent; transition: border-color 0.3s;">Cryptocurrency →</a>
-        </div>
-        
         <div class="intro-box">
-            <h2>Executive Summary</h2>
-            <p>Inflation concerns are overstated due to measurement distortions, real economic fundamentals remain sound, and rate increases would not achieve their intended outcomes. Leading investment strategists and Fed officials align on a single message: <strong>patience, not action</strong> is the appropriate policy response.</p>
+            <h2>Welcome</h2>
+            <p>In markets and policy, consensus rarely marks opportunity. The Contrarian presents evidence-based analyses that challenge conventional wisdom and examine the data underneath mainstream narratives.</p>
+            <p>Explore detailed cases built from leading research and expert testimony. Each analysis stands independently—read what interests you, or dig into all of them.</p>
         </div>
         
-        <div class="argument-grid">
-            <div class="argument-card">
-                <span class="number">1</span>
-                <h3>Inflation Measurement Distortions</h3>
-                <p>Core CPI for August sits at <span class="highlight">2.3% year-over-year</span>—essentially in line with the Fed's 2% target. The apparent gap between CPI and PCE is driven by just two items:</p>
-                <div class="key-stat">
-                    <strong>• Financial services fees</strong> (~60% of PCE gap) - portfolio management, not experienced by average consumers
+        <div class="articles-grid">
+            <div class="article-card">
+                <div class="article-header">
+                    <h3>The Case Against<br>Raising Rates</h3>
                 </div>
-                <div class="key-stat">
-                    <strong>• Flash memory prices</strong> - up 9 standard deviations, irrelevant to consumer inflation perception
+                <div class="article-body">
+                    <p>Inflation concerns are overstated due to measurement distortions. Core CPI sits at 2.3% (near target), while PCE elevation is driven by just two items: portfolio management fees and flash memory prices—neither relevant to average consumers.</p>
+                    <div class="key-points">
+                        <strong>Key Arguments:</strong>
+                        <ul>
+                            <li>Inflation data shows no wage-price spiral</li>
+                            <li>Corporate credit spreads signal no distress</li>
+                            <li>Rate hikes won't slow AI infrastructure spend</li>
+                            <li>Consumer expectations remain anchored</li>
+                        </ul>
+                    </div>
+                    <p>Based on analysis from Fundstrat Global Advisors, Federal Reserve data, and market indicators.</p>
+                    <a href="rates.html" class="article-link">Read Full Analysis →</a>
                 </div>
-                <p><strong>The verdict:</strong> Core PCE's 3.3% reading is a measurement error, not broad-based inflation.</p>
-                <p class="data-source">Source: Fundstrat Global Advisors, Federal Reserve analysis</p>
             </div>
             
-            <div class="argument-card">
-                <span class="number">2</span>
-                <h3>Corporate Credit Markets Show No Distress</h3>
-                <p>High-yield credit spreads (OAS) are behaving normally—signaling healthy corporate fundamentals. This is the single best indicator of economic trouble.</p>
-                <div class="key-stat">
-                    High-yield spreads are significantly more reliable predictors of recession than the yield curve (which predicted 2 of last 9 recessions)
+            <div class="article-card">
+                <div class="article-header">
+                    <h3>The Case for<br>Cryptocurrency</h3>
                 </div>
-                <p><strong>What this means:</strong> If the economy were deteriorating, the market most sensitive to credit risk would show warning signs. It's not.</p>
-                <p class="data-source">Source: Fundstrat Global Advisors</p>
-            </div>
-            
-            <div class="argument-card">
-                <span class="number">3</span>
-                <h3>Rate Hikes Won't Solve AI Infrastructure Build</h3>
-                <p>AI hyperscalers justify their capex based on expected returns, not fed funds rates. They could justify spending even with rates <span class="highlight">100 basis points higher</span>.</p>
-                <div class="key-stat">
-                    The infrastructure build is addressing decades of underinvestment post-GFC, not demand-pull inflation
+                <div class="article-body">
+                    <p>Cryptocurrency is experiencing fundamental adoption by Wall Street institutions. BlackRock, Stripe, and major finance firms are building blockchain infrastructure. A $20 trillion opportunity awaits as institutions tokenize $100 trillion in assets.</p>
+                    <div class="key-points">
+                        <strong>Key Arguments:</strong>
+                        <ul>
+                            <li>Institutional adoption accelerating</li>
+                            <li>Crypto winter deleveraging complete</li>
+                            <li>4-year cycle bottom underway</li>
+                            <li>Best performing macro asset in 2026</li>
+                        </ul>
+                    </div>
+                    <p>Based on analysis from Tom Lee (Fundstrat), BlackRock leadership, and market cycle data.</p>
+                    <a href="crypto.html" class="article-link">Read Full Analysis →</a>
                 </div>
-                <p><strong>The reality:</strong> This is supply-side investment filling a genuine gap, not speculative excess.</p>
-                <p class="data-source">Source: Tom Lee, Fundstrat Global Advisors</p>
-            </div>
-            
-            <div class="argument-card">
-                <span class="number">4</span>
-                <h3>Gasoline Burden Remains Below Historical Norms</h3>
-                <p>Despite recent geopolitical oil spikes:</p>
-                <div class="key-stat">
-                    • Current: <strong>2.2%</strong> of household spending
-                </div>
-                <div class="key-stat">
-                    • 65-year average: ~3%
-                </div>
-                <div class="key-stat">
-                    • GFC crisis era: 4.5%
-                </div>
-                <p><strong>Key takeaway:</strong> Energy costs are not a demand-driven inflation pressure point.</p>
-                <p class="data-source">Source: Fundstrat Global Advisors analysis</p>
-            </div>
-            
-            <div class="argument-card">
-                <span class="number">5</span>
-                <h3>Consumer Inflation Expectations Anchored</h3>
-                <p>Multiple surveys show declining inflation expectations:</p>
-                <div class="key-stat">
-                    • NY Fed inflation expectations: <strong>Down 3 months in a row</strong>
-                </div>
-                <div class="key-stat">
-                    • NFIB survey: Business inflation concerns trending downward
-                </div>
-                <div class="key-stat">
-                    • Conference Board & Umish: All confirming the downtrend
-                </div>
-                <p><strong>Why it matters:</strong> Anchored expectations mean no wage-price spiral risk, supporting a hold position.</p>
-                <p class="data-source">Source: Federal Reserve, NFIB, Conference Board</p>
-            </div>
-            
-            <div class="argument-card">
-                <span class="number">6</span>
-                <h3>Labor Market is Healthy but Globally Constrained</h3>
-                <p>August jobs report exceeded expectations, yet global labor growth remains slow. This is not a "hot labor market" problem—it's a structural constraint.</p>
-                <div class="key-stat">
-                    Raising rates would worsen labor scarcity, not improve it
-                </div>
-                <p><strong>The solution:</strong> AI addresses this gap by filling empty jobs, not creating demand-pull inflation.</p>
-                <p class="data-source">Source: Fundstrat Global Advisors, BLS data</p>
-            </div>
-            
-            <div class="argument-card">
-                <span class="number">7</span>
-                <h3>Growth is Broadening Across Sectors</h3>
-                <p>Economic expansion shows:</p>
-                <div class="key-stat">
-                    • Strong earnings visibility backed by AI and ISM recovery
-                </div>
-                <div class="key-stat">
-                    • Small-cap outperformance indicating breadth
-                </div>
-                <div class="key-stat">
-                    • No signs of unsustainable boom dynamics
-                </div>
-                <p><strong>Market signal:</strong> This is healthy rebalancing from underinvestment, not inflationary excess.</p>
-                <p class="data-source">Source: Fundstrat Global Advisors, Russell indexes</p>
-            </div>
-            
-            <div class="argument-card">
-                <span class="number">8</span>
-                <h3>Fed Policy Remains Disinflationary</h3>
-                <p>According to Fed Governor Chris Waller and other officials:</p>
-                <div class="key-stat">
-                    Current monetary policy is still disinflationary in its stance
-                </div>
-                <p><strong>The implication:</strong> No urgency exists for preemptive rate hikes. Patience is warranted.</p>
-                <p class="data-source">Source: Fed Governor Chris Waller, recent Reuters commentary</p>
             </div>
         </div>
         
-        <div class="sources-section">
-            <h2>Supporting Sources & Expert Opinion</h2>
-            
-            <div class="source-item">
-                <h4>Fundstrat Global Advisors - Tom Lee, CIO</h4>
-                <p><strong>Position:</strong> Strong advocate for Fed holding rates steady</p>
-                <div class="quote">
-                    "I think economists are fighting last year's wars... The Fed's targets 2% year-over-year. Core CPI for August is likely to come in around 2.3%. Well, that's not too off the Fed's target. So, I think it makes sense the Fed should be a little more patient."
-                </div>
-                <p>Tom Lee points to the 100 basis point gap between Core PCE and Core CPI, driven almost entirely by financial services fees (60%) and flash memory prices. This represents measurement distortion, not broad inflation.</p>
-                <p class="data-source">Source: Tom Lee, Wealthy Podcast Interview, September 2026</p>
-            </div>
-            
-            <div class="source-item">
-                <h4>Federal Reserve Governor Chris Waller</h4>
-                <p><strong>Position:</strong> Leaning towards holding, data-dependent</p>
-                <div class="quote">
-                    "August... I'm leaning towards not hiking and it's all going to come down to August CPI. If there's continued progress on inflation, I'm going to advocate for hold. If it's a hot August print, I'd consider a rate hike. The current policies are still disinflationary."
-                </div>
-                <p>Waller's recent Reuters commentary acknowledges the PCE measurement issue and the fact that inflation hasn't been at the Fed's target for more than four years—yet current policy remains disinflationary.</p>
-                <p class="data-source">Source: Federal Reserve Governor Chris Waller, August 2026</p>
-            </div>
-            
-            <div class="source-item">
-                <h4>High-Yield Credit Markets Consensus</h4>
-                <p><strong>Position:</strong> Corporate fundamentals healthy; no recession pricing</p>
-                <p>High-yield OAS (options-adjusted spreads) are the most reliable market indicator of economic distress. Currently showing healthy corporate credit quality with no signs of deterioration. This consensus view from the market most motivated to price in economic risk suggests confidence in the current trajectory.</p>
-                <p class="data-source">Source: Market data aggregation, Credit analysis</p>
-            </div>
-            
-            <div class="source-item">
-                <h4>Small Business Optimism Surveys (NFIB)</h4>
-                <p><strong>Position:</strong> Inflation concerns declining</p>
-                <div class="quote">
-                    "Inflation as a problem for business was really high in 2022, spiked early this year because of the Iran war, but it's actually trending down. Same thing with prices planned increases."
-                </div>
-                <p>The National Federation of Independent Business survey shows both past inflation perceptions and future price increase plans are declining significantly—the opposite of what would justify rate hikes.</p>
-                <p class="data-source">Source: NFIB Small Business Optimism Index, September 2026</p>
-            </div>
-            
-            <div class="source-item">
-                <h4>New York Federal Reserve Consumer Expectations Survey</h4>
-                <p><strong>Position:</strong> Inflation expectations falling</p>
-                <p>The NY Fed's survey shows inflation expectations have declined for three consecutive months. This is critical—anchored expectations are the foundation for price stability without aggressive tightening.</p>
-                <p class="data-source">Source: Federal Reserve, NY Fed Consumer Expectations Survey, 2026</p>
-            </div>
-            
-            <div class="source-item">
-                <h4>Conference Board & Umish Survey Data</h4>
-                <p><strong>Position:</strong> Corroborate downward inflation trend</p>
-                <p>Multiple independent surveys (Conference Board, Umish) all show the same pattern: inflation expectations declining. This convergence of data sources strengthens the case for monetary patience.</p>
-                <p class="data-source">Source: Conference Board, Umish Economic Surveys</p>
-            </div>
-            
-            <div class="source-item">
-                <h4>AI Infrastructure Investment Analysis</h4>
-                <p><strong>Position:</strong> Post-GFC recovery, not speculative excess</p>
-                <div class="quote">
-                    "For more than a decade, private investment as a percentage of GDP was actually below depreciation. In other words, capital stock was depleted in the US... Buildings got really old, roads got really old... AI is actually filling this gap in jobs."
-                </div>
-                <p>The current capex boom represents the necessary recovery from chronic underinvestment, addressing real supply constraints and labor market gaps. Monetary tightening is counterproductive in this context.</p>
-                <p class="data-source">Source: Tom Lee, Fundstrat Global Advisors</p>
-            </div>
-        </div>
-        
-        <div class="summary-box">
-            <h3>The Bottom Line</h3>
-            <ul>
-                <li><strong>Real inflation (Core CPI)</strong> is at or near the Fed's 2% target—measurement distortions account for PCE elevation</li>
-                <li><strong>Corporate credit markets</strong> show no economic distress or recession risk</li>
-                <li><strong>Rate hikes won't achieve their goals</strong>—AI infrastructure spending is economically justified regardless of rate levels</li>
-                <li><strong>Consumer expectations are anchored</strong>—no wage-price spiral developing</li>
-                <li><strong>Energy and labor costs</strong> are either contained or represent structural rather than demand-driven pressures</li>
-                <li><strong>Current policy remains disinflationary</strong>—no urgency for tightening</li>
-                <li><strong>Growth is healthy and broadening</strong>—not overheating</li>
-                <li><strong>The risk of rate hikes</strong> now outweighs the benefits</li>
-            </ul>
+        <div class="about-box">
+            <h2>About This Analysis</h2>
+            <p><strong>The Contrarian</strong> publishes contrarian financial and policy analysis grounded in primary sources, expert testimony, and data.</p>
+            <p>Our approach: Challenge consensus narratives by examining the evidence underneath. Question whether mainstream interpretation aligns with actual data. Look for where smart money and institutions lead, before retail catches on.</p>
+            <p>Each analysis is self-contained and citable. Read in any order. All sources are documented.</p>
         </div>
     </div>
     
     <footer>
-        <p>&copy; 2026 The Contrarian Analysis | Sources: Fundstrat Global Advisors, Federal Reserve, NFIB, Conference Board | Published: Saturday, September 13, 2026</p>
+        <p>&copy; 2026 The Contrarian | Financial Analysis & Research | Published: Saturday, September 13, 2026</p>
     </footer>
 </body>
 </html>
