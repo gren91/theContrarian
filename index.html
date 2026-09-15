@@ -5,6 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Contrarian - Financial Analysis & Market Research</title>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7920337712237199" crossorigin="anonymous"></script>
+    <script>
+        // Auto-update publication date to today
+        function updateDate() {
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            const today = new Date().toLocaleDateString('en-US', options);
+            const dateElement = document.querySelector('.publication-date');
+            if (dateElement) {
+                dateElement.textContent = today;
+            }
+        }
+        document.addEventListener('DOMContentLoaded', updateDate);
+    </script>
     <style>
         * {
             margin: 0;
