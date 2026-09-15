@@ -110,8 +110,22 @@
             margin-bottom: 40px;
         }
         
+        .articles-grid:nth-of-type(3) {
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        }
+        
+        @media (max-width: 1024px) {
+            .articles-grid:nth-of-type(3) {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
         @media (max-width: 768px) {
             .articles-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .articles-grid:nth-of-type(3) {
                 grid-template-columns: 1fr;
             }
         }
@@ -237,7 +251,7 @@
         <div style="text-align: center; margin: 30px 0; padding: 20px; background: #fafaf8; border: 1px solid #ddd;">
             <ins class="adsbygoogle"
                  style="display:block"
-                 data-ad-client="ca-pub-xxxxxxxxxxxxxxxx"
+                 data-ad-client="ca-pub-7920337712237199"
                  data-ad-slot="xxxxxxxxxx"
                  data-ad-format="auto"
                  data-full-width-responsive="true"></ins>
@@ -246,10 +260,13 @@
             </script>
         </div>
         
+        <h2 style="font-size: 2em; margin-bottom: 25px; border-bottom: 2px solid #000; padding-bottom: 15px;">Featured Analysis</h2>
+        
         <div class="articles-grid">
             <div class="article-card">
-                <div class="article-header">
-                    <h3>The Case Against<br>Raising Rates</h3>
+                <div class="article-header" style="background: #000; border-bottom: 3px solid #000;">
+                    <h3 style="color: white; font-size: 1.8em;">The Case Against<br>Raising Rates</h3>
+                    <p style="color: #ccc; margin-top: 8px; font-style: italic;">Primary Contrarian View</p>
                 </div>
                 <div class="article-body">
                     <p>Inflation concerns are overstated due to measurement distortions. Core CPI sits at 2.3% (near target), while PCE elevation is driven by just two items: portfolio management fees and flash memory prices—neither relevant to average consumers.</p>
@@ -284,6 +301,86 @@
                     </div>
                     <p>Based on analysis from Tom Lee (Fundstrat), BlackRock leadership, and market cycle data.</p>
                     <a href="crypto.html" class="article-link">Read Full Analysis →</a>
+                </div>
+            </div>
+        </div>
+        
+        <h2 style="font-size: 2em; margin-bottom: 25px; margin-top: 40px; border-bottom: 2px solid #000; padding-bottom: 15px;">Additional Analyses</h2>
+        
+        <div class="articles-grid">
+            <div class="article-card">
+                <div class="article-header">
+                    <h3>Why AI Won't<br>Destroy Jobs</h3>
+                </div>
+                <div class="article-body">
+                    <p>Consensus fears AI will collapse the tax base and eliminate jobs. Historical precedent tells a different story: from tractors to the internet, technology creates more jobs than it eliminates while raising living standards.</p>
+                    <div class="key-points">
+                        <strong>Key Arguments:</strong>
+                        <ul>
+                            <li>Global labor shortage, not surplus</li>
+                            <li>Tractors eliminated 38% of farming jobs</li>
+                            <li>Internet fad that created industries</li>
+                            <li>Robots will be tax-generating units</li>
+                        </ul>
+                    </div>
+                    <a href="ai-jobs.html" class="article-link">Read Full Analysis →</a>
+                </div>
+            </div>
+            
+            <div class="article-card">
+                <div class="article-header">
+                    <h3>Why Corporate<br>Credit Is Healthy</h3>
+                </div>
+                <div class="article-body">
+                    <p>Consensus worries rising rates will trigger a credit crisis. High-yield credit spreads—the most reliable recession predictor—show corporate credit quality remains intact. Spreading risk is not deteriorating.</p>
+                    <div class="key-points">
+                        <strong>Key Arguments:</strong>
+                        <ul>
+                            <li>High-yield spreads are best predictor</li>
+                            <li>Yield curve is a poor indicator</li>
+                            <li>No covenant violations emerging</li>
+                            <li>Companies can afford higher rates</li>
+                        </ul>
+                    </div>
+                    <a href="credit-markets.html" class="article-link">Read Full Analysis →</a>
+                </div>
+            </div>
+            
+            <div class="article-card">
+                <div class="article-header">
+                    <h3>The U.S. Economy<br>Is Strong</h3>
+                </div>
+                <div class="article-body">
+                    <p>Recession fears dominate headlines. Yet earnings visibility is solid, ISM is recovering, labor remains strong, and credit shows no distress. The economy isn't headed for contraction—it's expanding.</p>
+                    <div class="key-points">
+                        <strong>Key Arguments:</strong>
+                        <ul>
+                            <li>Earnings visibility is broadening</li>
+                            <li>ISM recovering, not contracting</li>
+                            <li>Labor market remains intact</li>
+                            <li>No credit dislocations emerging</li>
+                        </ul>
+                    </div>
+                    <a href="economy-strength.html" class="article-link">Read Full Analysis →</a>
+                </div>
+            </div>
+            
+            <div class="article-card">
+                <div class="article-header">
+                    <h3>The $30 Trillion<br>Infrastructure Boom</h3>
+                </div>
+                <div class="article-body">
+                    <p>AI infrastructure spend is not temporary. A $30 trillion buildout is just beginning—comparable to railroads, electrical grids, and highways. This is a decade-long growth driver fueling employment and capital investment.</p>
+                    <div class="key-points">
+                        <strong>Key Arguments:</strong>
+                        <ul>
+                            <li>$30T is civilization-scale investment</li>
+                            <li>Historic booms span multiple decades</li>
+                            <li>Companies already showing profitability</li>
+                            <li>Massive supply chain implications</li>
+                        </ul>
+                    </div>
+                    <a href="infrastructure.html" class="article-link">Read Full Analysis →</a>
                 </div>
             </div>
         </div>
