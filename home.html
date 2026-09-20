@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Contrarian - Financial Analysis & Market Research</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: #1a1a1a;
+            background: #f5f1e8;
+        }
+        
+        header {
+            background: white;
+            color: #000;
+            text-align: center;
+            padding: 40px 20px 20px;
+            border-top: 3px solid #000;
+            border-bottom: 2px solid #000;
+        }
+        
+        .newspaper-masthead {
+            text-align: center;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #999;
+            padding-bottom: 8px;
+        }
+        
+        .publication-date {
+            font-size: 0.85em;
+            letter-spacing: 0.05em;
+            color: #666;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+        
+        header h1 {
+            font-size: 3.5em;
+            margin-bottom: 8px;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            line-height: 1.1;
+        }
+        
+        header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+            font-style: italic;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 30px 20px;
+            background: white;
+        }
+        
+        .intro-box {
+            background: #fafaf8;
+            padding: 25px;
+            border-radius: 0;
+            margin-bottom: 30px;
+            box-shadow: none;
+            border-left: 4px solid #000;
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .intro-box h2 {
+            color: #000;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+            border-bottom: 2px solid #000;
+            padding-bottom: 8px;
+        }
+        
+        .intro-box p {
+            margin-bottom: 15px;
+            font-size: 1em;
+        }
+        
+        .articles-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+        
+        @media (max-width: 768px) {
+            .articles-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .article-card {
+            background: white;
+            padding: 0;
+            border-radius: 0;
+            box-shadow: none;
+            border: 2px solid #000;
+            transition: none;
+            overflow: hidden;
+        }
+        
+        .article-card:hover {
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .article-header {
+            background: #000;
+            color: white;
+            padding: 20px;
+            border-bottom: 2px solid #000;
+        }
+        
+        .article-header h3 {
+            font-size: 1.6em;
+            margin-bottom: 8px;
+        }
+        
+        .article-body {
+            padding: 25px;
+        }
+        
+        .article-body p {
+            color: #333;
+            margin-bottom: 15px;
+            line-height: 1.7;
+            font-size: 0.95em;
+        }
+        
+        .article-card .key-points {
+            background: #f5f1e8;
+            padding: 15px;
+            border-left: 3px solid #000;
+            margin: 15px 0;
+        }
+        
+        .article-card .key-points li {
+            margin-bottom: 8px;
+            margin-left: 20px;
+        }
+        
+        .article-link {
+            display: inline-block;
+            background: #000;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            font-weight: 700;
+            margin-top: 15px;
+            transition: background 0.3s;
+        }
+        
+        .article-link:hover {
+            background: #333;
+        }
+        
+        .about-box {
+            background: #f0ebe3;
+            padding: 25px;
+            border: 2px solid #000;
+            border-radius: 0;
+            margin-top: 30px;
+        }
+        
+        .about-box h2 {
+            color: #000;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+            border-bottom: 2px solid #000;
+            padding-bottom: 8px;
+        }
+        
+        .about-box p {
+            margin-bottom: 12px;
+            line-height: 1.7;
+        }
+        
+        footer {
+            background: #1a1a1a;
+            color: #999;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            border-top: 2px solid #000;
+            font-size: 0.85em;
+        }
+        
+        h1, h2, h3, h4 {
+            font-weight: 700;
+            font-family: 'Georgia', serif;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="newspaper-masthead">
+            <p class="publication-date">Loading...</p>
+        </div>
+        <h1>The Contrarian</h1>
+        <p>Contrarian analysis of markets, policy, and finance</p>
+    </header>
+    
+    <div class="container">
+        <div class="intro-box">
+            <h2>Welcome</h2>
+            <p>In markets and policy, consensus rarely marks opportunity. The Contrarian presents evidence-based analyses that challenge conventional wisdom and examine the data underneath mainstream narratives.</p>
+            <p>Explore detailed cases built from leading research and expert testimony. Each analysis stands independently—read what interests you, or dig into all of them.</p>
+        </div>
+        
+        <div class="articles-grid">
+            <div class="article-card">
+                <div class="article-header">
+                    <h3>The Case Against<br>Raising Rates</h3>
+                </div>
+                <div class="article-body">
+                    <p>Inflation concerns are overstated due to measurement distortions. Core CPI sits at 2.3% (near target), while PCE elevation is driven by just two items: portfolio management fees and flash memory prices—neither relevant to average consumers.</p>
+                    <div class="key-points">
+                        <strong>Key Arguments:</strong>
+                        <ul>
+                            <li>Inflation data shows no wage-price spiral</li>
+                            <li>Corporate credit spreads signal no distress</li>
+                            <li>Rate hikes won't slow AI infrastructure spend</li>
+                            <li>Consumer expectations remain anchored</li>
+                        </ul>
+                    </div>
+                    <p>Based on analysis from Fundstrat Global Advisors, Federal Reserve data, and market indicators.</p>
+                    <a href="rates.html" class="article-link">Read Full Analysis →</a>
+                </div>
+            </div>
+            
+            <div class="article-card">
+                <div class="article-header">
+                    <h3>The Case for<br>Cryptocurrency</h3>
+                </div>
+                <div class="article-body">
+                    <p>Cryptocurrency is experiencing fundamental adoption by Wall Street institutions. BlackRock, Stripe, and major finance firms are building blockchain infrastructure. A $20 trillion opportunity awaits as institutions tokenize $100 trillion in assets.</p>
+                    <div class="key-points">
+                        <strong>Key Arguments:</strong>
+                        <ul>
+                            <li>Institutional adoption accelerating</li>
+                            <li>Crypto winter deleveraging complete</li>
+                            <li>4-year cycle bottom underway</li>
+                            <li>Best performing macro asset in 2026</li>
+                        </ul>
+                    </div>
+                    <p>Based on analysis from Tom Lee (Fundstrat), BlackRock leadership, and market cycle data.</p>
+                    <a href="crypto.html" class="article-link">Read Full Analysis →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="about-box">
+            <h2>About This Analysis</h2>
+            <p><strong>The Contrarian</strong> publishes contrarian financial and policy analysis grounded in primary sources, expert testimony, and data.</p>
+            <p>Our approach: Challenge consensus narratives by examining the evidence underneath. Question whether mainstream interpretation aligns with actual data. Look for where smart money and institutions lead, before retail catches on.</p>
+            <p>Each analysis is self-contained and citable. Read in any order. All sources are documented.</p>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2026 The Contrarian | Financial Analysis & Research | Published: <span class="footer-date">Loading...</span></p>
+    </footer>
+</body>
+</html>

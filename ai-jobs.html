@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why AI Won't Destroy Jobs - The Contrarian</title>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7920337712237199" crossorigin="anonymous"></script>
+    <script>
+        // Auto-update publication date to today
+        function updateDate() {
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            const today = new Date().toLocaleDateString('en-US', options);
+            const dateElement = document.querySelector('.publication-date');
+            if (dateElement) {
+                dateElement.textContent = today;
+            }
+        }
+        document.addEventListener('DOMContentLoaded', updateDate);
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: #1a1a1a;
+            background: #f5f1e8;
+        }
+        
+        header {
+            background: white;
+            color: #000;
+            text-align: center;
+            padding: 40px 20px 20px;
+            border-top: 3px solid #000;
+            border-bottom: 2px solid #000;
+        }
+        
+        .newspaper-masthead {
+            text-align: center;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #999;
+            padding-bottom: 8px;
+        }
+        
+        .publication-date {
+            font-size: 0.85em;
+            letter-spacing: 0.05em;
+            color: #666;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+        
+        header h1 {
+            font-size: 3.5em;
+            margin-bottom: 8px;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+        }
+        
+        .tagline {
+            font-size: 0.95em;
+            color: #555;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        
+        nav {
+            background: white;
+            border-bottom: 1px solid #ddd;
+            padding: 15px 20px;
+            text-align: center;
+        }
+        
+        nav a {
+            margin: 0 20px;
+            text-decoration: none;
+            color: #000;
+            font-weight: 500;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.3s;
+        }
+        
+        nav a:hover {
+            border-bottom: 2px solid #000;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        
+        .article-title {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            line-height: 1.3;
+            border-bottom: 2px solid #000;
+            padding-bottom: 15px;
+        }
+        
+        .argument-card {
+            background: white;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-bottom: 25px;
+            transition: border-color 0.3s;
+        }
+        
+        .argument-card:hover {
+            border-color: #999;
+        }
+        
+        .argument-card h3 {
+            font-size: 1.4em;
+            margin-bottom: 12px;
+            color: #000;
+        }
+        
+        .number {
+            display: inline-block;
+            background: #000;
+            color: white;
+            width: 35px;
+            height: 35px;
+            text-align: center;
+            line-height: 35px;
+            font-weight: bold;
+            margin-right: 10px;
+            font-size: 1.1em;
+        }
+        
+        .argument-card p {
+            margin-bottom: 12px;
+            font-size: 1em;
+        }
+        
+        .key-stat {
+            background: #efefef;
+            border-left: 3px solid #000;
+            padding: 15px;
+            margin: 15px 0;
+            font-weight: 500;
+        }
+        
+        .quote {
+            border-left: 3px solid #000;
+            padding-left: 15px;
+            margin: 15px 0;
+            font-style: italic;
+            background: #f5f1e8;
+            padding: 15px;
+        }
+        
+        .summary-box {
+            background: white;
+            border: 2px solid #000;
+            padding: 20px;
+            margin-top: 30px;
+            font-size: 1.05em;
+        }
+        
+        .summary-box h3 {
+            margin-bottom: 12px;
+            font-size: 1.3em;
+        }
+        
+        nav-links {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+        
+        .nav-link {
+            text-decoration: none;
+            color: #000;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-link:hover {
+            color: #666;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 15px;
+            }
+            
+            header h1 {
+                font-size: 2em;
+            }
+            
+            .article-title {
+                font-size: 1.8em;
+            }
+            
+            nav a {
+                margin: 0 10px;
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="newspaper-masthead">
+            <h1>The Contrarian</h1>
+            <p class="tagline">Independent Analysis on Markets, Policy & Economic Opportunity</p>
+        </div>
+        <p class="publication-date">Loading...</p>
+    </header>
+    
+    <nav>
+        <a href="index.html">← Home</a>
+        <a href="rates.html">Interest Rates</a>
+        <a href="crypto.html">Cryptocurrency</a>
+        <a href="ai-jobs.html"><strong>AI & Jobs</strong></a>
+        <a href="credit-markets.html">Credit Markets</a>
+        <a href="economy-strength.html">Economy</a>
+        <a href="infrastructure.html">Infrastructure</a>
+    </nav>
+    
+    <div class="container">
+        <h2 class="article-title">Why AI Won't Destroy Jobs—It Will Fill Them</h2>
+        
+        <p>The consensus narrative claims artificial intelligence will eliminate jobs, devastate the tax base, and trigger economic collapse. Tom Lee presents a contrarian case: AI is filling a critical labor gap in a world where global workforce growth has stalled, and history shows technological disruption creates broader prosperity.</p>
+        
+        <!-- Google AdSense Ad Unit -->
+        <div style="text-align: center; margin: 30px 0; padding: 20px; background: #fafaf8; border: 1px solid #ddd;">
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-7920337712237199"
+                 data-ad-slot="xxxxxxxxxx"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+        
+        <div class="argument-card">
+            <h3><span class="number">1</span>Global Labor Growth Is Stalling</h3>
+            <p>The real constraint on economic growth isn't capital—it's labor. Global workforce growth has slowed dramatically, particularly in developed economies. This isn't temporary; it reflects demographic trends that will persist for decades.</p>
+            <div class="key-stat">
+                <strong>The Gap:</strong> AI automation doesn't create unemployment; it solves the labor shortage by increasing productivity in a world where workers are becoming scarce.
+            </div>
+        </div>
+        
+        <div class="argument-card">
+            <h3><span class="number">2</span>Tractors Didn't Destroy the Economy—They Built It</h3>
+            <p>In 1929, 38% of Americans were farmers. The innovation of flash-frozen goods and farm mechanization eliminated farming jobs dramatically—dropping to just 5% of the workforce. Yet the economy didn't collapse. It exploded. New industries emerged that those displaced farmers couldn't have imagined.</p>
+            <div class="key-stat">
+                <strong>The Historical Parallel:</strong> Every major technology (tractors, electricity, the internet) sparked identical fears of mass unemployment. Every time, the economy adapted and grew.
+            </div>
+        </div>
+        
+        <div class="argument-card">
+            <h3><span class="number">3</span>The Internet "Fad" That Created Millions of Jobs</h3>
+            <p>In the 1990s, economists predicted the internet would be a minor curiosity with no lasting economic impact. Instead, it created entire industries: web development, digital marketing, cloud computing, social media, e-commerce. Most of these jobs didn't exist 30 years ago.</p>
+            <div class="key-stat">
+                <strong>The Lesson:</strong> We cannot predict which jobs AI will create, only that history shows technology creates more opportunity than it eliminates.
+            </div>
+        </div>
+        
+        <div class="argument-card">
+            <h3><span class="number">4</span>Robots Will Be Tax-Generating Units</h3>
+            <p>The doomsday scenario assumes AI eliminates tax income because people stop working. But there's a counter-case: AI systems themselves become tax-generating assets. If a robot performs work previously done by a human, the company running that robot generates profit—which is taxed.</p>
+            <div class="key-stat">
+                <strong>The Revenue Model:</strong> As automation increases productivity, corporate profits rise, tax revenue rises, and government has MORE resources to fund social programs, education, and infrastructure.
+            </div>
+        </div>
+        
+        <div class="argument-card">
+            <h3><span class="number">5</span>AI Fills Jobs That Don't Exist Yet</h3>
+            <p>Right now, there are openings for AI trainers, prompt engineers, machine learning specialists, AI ethicists, and automation auditors. These jobs literally didn't exist five years ago. As AI permeates every industry, new roles will emerge that we can't yet imagine.</p>
+            <div class="key-stat">
+                <strong>The Trend:</strong> Job displacement in mature industries (manufacturing, data entry) is offset by job creation in emerging sectors (AI training, robotics maintenance, autonomous systems management).
+            </div>
+        </div>
+        
+        <div class="argument-card">
+            <h3><span class="number">6</span>Consensus Economists Are "Fighting Last Year's Wars"</h3>
+            <p>As Tom Lee notes, "Economists are fighting last year's wars." They're trained on historical patterns and extrapolate them linearly into the future. But technological breakthroughs don't follow linear patterns—they create new realities that break old models.</p>
+            <div class="key-stat">
+                <strong>The Bias:</strong> The same economists who dismissed the internet, email, and smartphones as minor novelties are now proclaiming AI will destroy civilization. Their track record on disruption is not strong.
+            </div>
+        </div>
+        
+        <div class="argument-card">
+            <h3><span class="number">7</span>Wage Growth Follows Productivity Growth</h3>
+            <p>When workers have access to better tools (computers, factories, AI), their productivity increases, and their wages rise. A farmer with a tractor earns more than a farmer with a plow. A coder with AI tools earns more than one without them.</p>
+            <div class="key-stat">
+                <strong>The Mechanism:</strong> AI doesn't lower wages—it increases what workers can produce per hour, which drives wage growth for those who adapt to the new tools.
+            </div>
+        </div>
+        
+        <div class="argument-card">
+            <h3><span class="number">8</span>The Real Risk Is Unpreparedness, Not AI Itself</h3>
+            <p>The legitimate concern isn't that AI will destroy jobs—it's that we won't prepare people for the transition. Education systems need to adapt. Retraining programs need to expand. Social safety nets need updating. The solution isn't to ban AI; it's to manage the transition thoughtfully.</p>
+            <div class="key-stat">
+                <strong>The Actionable Risk:</strong> Economies that embrace AI and invest in worker retraining will thrive. Those that resist will fall behind, and their workers will be worse off—not because of AI, but because they're uncompetitive.
+            </div>
+        </div>
+        
+        <div class="summary-box">
+            <h3>The Contrarian Conclusion</h3>
+            <p>AI will displace some jobs and create others, following a pattern repeated throughout history. Tractors didn't destroy farming—they transformed it and freed workers for more complex, higher-value roles. The internet didn't destroy the economy—it created it. AI will do the same.</p>
+            <p style="margin-top: 15px;">The real question isn't whether AI will destroy the economy. It's whether we'll invest in people and infrastructure to capture the opportunity.</p>
+        </div>
+        
+        <nav-links>
+            <a class="nav-link" href="rates.html">← Interest Rates</a>
+            <a class="nav-link" href="credit-markets.html">Credit Markets →</a>
+        </nav-links>
+    </div>
+</body>
+</html>
