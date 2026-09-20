@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Contrarian - Financial Analysis & Market Research</title>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7920337712237199" crossorigin="anonymous"></script>
+    <script>
+        // Auto-update publication date to today
+        function updateDate() {
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            const today = new Date().toLocaleDateString('en-US', options);
+            // Update header date
+            const headerDate = document.querySelector('.publication-date');
+            if (headerDate) {
+                headerDate.textContent = today;
+            }
+            // Update footer date
+            const footerDates = document.querySelectorAll('.footer-date');
+            footerDates.forEach(el => {
+                el.textContent = today;
+            });
+        }
+        document.addEventListener('DOMContentLoaded', updateDate);
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: #1a1a1a;
+            background: #f5f1e8;
+        }
+        
+        header {
+            background: white;
+            color: #000;
+            text-align: center;
+            padding: 40px 20px 20px;
+            border-top: 3px solid #000;
+            border-bottom: 2px solid #000;
+        }
+        
+        .newspaper-masthead {
+            text-align: center;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #999;
+            padding-bottom: 8px;
+        }
+        
+        .publication-date {
+            font-size: 0.85em;
+            letter-spacing: 0.05em;
+            color: #666;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+        
+        header h1 {
+            font-size: 3.5em;
+            margin-bottom: 8px;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            line-height: 1.1;
+        }
+        
+        header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+            font-style: italic;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 30px 20px;
+            background: white;
+        }
+        
+        .intro-box {
+            background: #fafaf8;
+            padding: 25px;
+            border-radius: 0;
+            margin-bottom: 30px;
+            box-shadow: none;
+            border-left: 4px solid #000;
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .intro-box h2 {
+            color: #000;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+            border-bottom: 2px solid #000;
+            padding-bottom: 8px;
+        }
+        
+        .intro-box p {
+            margin-bottom: 15px;
+            font-size: 1em;
+        }
+        
+        .articles-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+        
+        .articles-grid:nth-of-type(3) {
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        }
+        
+        @media (max-width: 1024px) {
+            .articles-grid:nth-of-type(3) {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .articles-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .articles-grid:nth-of-type(3) {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .article-card {
+            background: white;
+            padding: 0;
+            border-radius: 0;
+            box-shadow: none;
+            border: 2px solid #000;
+            transition: none;
+            overflow: hidden;
+        }
+        
+        .article-card:hover {
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .article-header {
+            background: #000;
+            color: white;
+            padding: 20px;
+            border-bottom: 2px solid #000;
+        }
+        
+        .article-header h3 {
+            font-size: 1.6em;
+            margin-bottom: 8px;
+        }
+        
+        .article-body {
+            padding: 25px;
+        }
+        
+        .article-body p {
+            color: #333;
+            margin-bottom: 15px;
+            line-height: 1.7;
+            font-size: 0.95em;
+        }
+        
+        .article-card .key-points {
+            background: #f5f1e8;
+            padding: 15px;
+            border-left: 3px solid #000;
+            margin: 15px 0;
+        }
+        
+        .article-card .key-points li {
+            margin-bottom: 8px;
+            margin-left: 20px;
+        }
+        
+        .article-link {
+            display: inline-block;
+            background: #000;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            font-weight: 700;
+            margin-top: 15px;
+            transition: background 0.3s;
+        }
+        
+        .article-link:hover {
+            background: #333;
+        }
+        
+        .about-box {
+            background: #f0ebe3;
+            padding: 25px;
+            border: 2px solid #000;
+            border-radius: 0;
+            margin-top: 30px;
+        }
+        
+        .about-box h2 {
+            color: #000;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+            border-bottom: 2px solid #000;
+            padding-bottom: 8px;
+        }
+        
+        .about-box p {
+            margin-bottom: 12px;
+            line-height: 1.7;
+        }
+        
+        footer {
+            background: #1a1a1a;
+            color: #999;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            border-top: 2px solid #000;
+            font-size: 0.85em;
+        }
+        
+        h1, h2, h3, h4 {
+            font-weight: 700;
+            font-family: 'Georgia', serif;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="newspaper-masthead">
+            <p class="publication-date">Loading...</p>
+        </div>
+        <h1>The Contrarian</h1>
+        <p>Contrarian analysis of markets, policy, and finance</p>
+    </header>
+    
+    <div class="container">
+        <div class="intro-box">
+            <h2>Welcome</h2>
+            <p>In markets and policy, consensus rarely marks opportunity. The Contrarian presents evidence-based analyses that challenge conventional wisdom and examine the data underneath mainstream narratives.</p>
+            <p>Explore detailed cases built from leading research and expert testimony. Each analysis stands independently—read what interests you, or dig into all of them.</p>
+        </div>
+        
+        <!-- Google AdSense Ad Unit -->
+        <div style="text-align: center; margin: 30px 0; padding: 20px; background: #fafaf8; border: 1px solid #ddd;">
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-7920337712237199"
+                 data-ad-slot="xxxxxxxxxx"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+        
+        <h2 style="font-size: 2em; margin-bottom: 25px; border-bottom: 2px solid #000; padding-bottom: 15px;">Featured Analysis</h2>
+        
+        <div class="articles-grid">
+            <div class="article-card">
+                <div class="article-header" style="background: #000; border-bottom: 3px solid #000;">
+                    <h3 style="color: white; font-size: 1.8em;">The Fed Hiked—<br>Why It's A Buying<br>Opportunity</h3>
+                    <p style="color: #ccc; margin-top: 8px; font-style: italic;">Primary Contrarian View</p>
+                </div>
+                <div class="article-body">
+                    <p>The Fed has raised rates, and markets sold off. But this is a buying opportunity. Core inflation will drop sharply to a "two-handle" below 3%, the economy is strong enough to handle higher rates, and cyclical sectors are poised to outperform dramatically.</p>
+                    <div class="key-points">
+                        <strong>Key Arguments:</strong>
+                        <ul>
+                            <li>Core PCE dropping below 3% by year-end</li>
+                            <li>Rate hikes won't slow AI infrastructure spend</li>
+                            <li>Cyclical stocks set to outperform</li>
+                            <li>Earnings up 25%, market only up 10%—stocks are cheaper</li>
+                        </ul>
+                    </div>
+                    <p>Based on analysis from Tom Lee (Fundstrat), Goldman Sachs inflation data, and market technicals.</p>
+                    <a href="rates.html" class="article-link">Read Full Analysis →</a>
+                </div>
+            </div>
+            
+            <div class="article-card">
+                <div class="article-header">
+                    <h3>The Case for<br>Cryptocurrency</h3>
+                </div>
+                <div class="article-body">
+                    <p>Cryptocurrency is experiencing fundamental adoption by Wall Street institutions. BlackRock, Stripe, and major finance firms are building blockchain infrastructure. A $20 trillion opportunity awaits as institutions tokenize $100 trillion in assets.</p>
+                    <div class="key-points">
+                        <strong>Key Arguments:</strong>
+                        <ul>
+                            <li>Institutional adoption accelerating</li>
+                            <li>Crypto winter deleveraging complete</li>
+                            <li>4-year cycle bottom underway</li>
+                            <li>Best performing macro asset in 2026</li>
+                        </ul>
+                    </div>
+                    <p>Based on analysis from Tom Lee (Fundstrat), BlackRock leadership, and market cycle data.</p>
+                    <a href="crypto.html" class="article-link">Read Full Analysis →</a>
+                </div>
+            </div>
+        </div>
+        
+        <h2 style="font-size: 2em; margin-bottom: 25px; margin-top: 40px; border-bottom: 2px solid #000; padding-bottom: 15px;">Additional Analyses</h2>
+        
+        <div class="articles-grid">
+            <div class="article-card">
+                <div class="article-header">
+                    <h3>Why AI Won't<br>Destroy Jobs</h3>
+                </div>
+                <div class="article-body">
+                    <p>Consensus fears AI will collapse the tax base and eliminate jobs. Historical precedent tells a different story: from tractors to the internet, technology creates more jobs than it eliminates while raising living standards.</p>
+                    <div class="key-points">
+                        <strong>Key Arguments:</strong>
+                        <ul>
+                            <li>Global labor shortage, not surplus</li>
+                            <li>Tractors eliminated 38% of farming jobs</li>
+                            <li>Internet fad that created industries</li>
+                            <li>Robots will be tax-generating units</li>
+                        </ul>
+                    </div>
+                    <a href="ai-jobs.html" class="article-link">Read Full Analysis →</a>
+                </div>
+            </div>
+            
+            <div class="article-card">
+                <div class="article-header">
+                    <h3>Why Corporate<br>Credit Is Healthy</h3>
+                </div>
+                <div class="article-body">
+                    <p>Consensus worries rising rates will trigger a credit crisis. High-yield credit spreads—the most reliable recession predictor—show corporate credit quality remains intact. Spreading risk is not deteriorating.</p>
+                    <div class="key-points">
+                        <strong>Key Arguments:</strong>
+                        <ul>
+                            <li>High-yield spreads are best predictor</li>
+                            <li>Yield curve is a poor indicator</li>
+                            <li>No covenant violations emerging</li>
+                            <li>Companies can afford higher rates</li>
+                        </ul>
+                    </div>
+                    <a href="credit-markets.html" class="article-link">Read Full Analysis →</a>
+                </div>
+            </div>
+            
+            <div class="article-card">
+                <div class="article-header">
+                    <h3>The U.S. Economy<br>Is Strong</h3>
+                </div>
+                <div class="article-body">
+                    <p>Recession fears dominate headlines. Yet earnings visibility is solid, ISM is recovering, labor remains strong, and credit shows no distress. The economy isn't headed for contraction—it's expanding.</p>
+                    <div class="key-points">
+                        <strong>Key Arguments:</strong>
+                        <ul>
+                            <li>Earnings visibility is broadening</li>
+                            <li>ISM recovering, not contracting</li>
+                            <li>Labor market remains intact</li>
+                            <li>No credit dislocations emerging</li>
+                        </ul>
+                    </div>
+                    <a href="economy-strength.html" class="article-link">Read Full Analysis →</a>
+                </div>
+            </div>
+            
+            <div class="article-card">
+                <div class="article-header">
+                    <h3>The $30 Trillion<br>Infrastructure Boom</h3>
+                </div>
+                <div class="article-body">
+                    <p>AI infrastructure spend is not temporary. A $30 trillion buildout is just beginning—comparable to railroads, electrical grids, and highways. This is a decade-long growth driver fueling employment and capital investment.</p>
+                    <div class="key-points">
+                        <strong>Key Arguments:</strong>
+                        <ul>
+                            <li>$30T is civilization-scale investment</li>
+                            <li>Historic booms span multiple decades</li>
+                            <li>Companies already showing profitability</li>
+                            <li>Massive supply chain implications</li>
+                        </ul>
+                    </div>
+                    <a href="infrastructure.html" class="article-link">Read Full Analysis →</a>
+                </div>
+            </div>
+            
+            <div class="article-card">
+                <div class="article-header">
+                    <h3>Physical AI &<br>Robotics Boom</h3>
+                </div>
+                <div class="article-body">
+                    <p>AI capex is just the beginning. Physical AI and robotics will generate equal or greater capex than current LLM infrastructure. Robots as economic output units solve the inflation problem and enable 7%+ growth without price pressure.</p>
+                    <div class="key-points">
+                        <strong>Key Arguments:</strong>
+                        <ul>
+                            <li>Physical AI will equal/exceed current AI capex</li>
+                            <li>Robots solve inflation paradox</li>
+                            <li>Tesla/SpaceX merger likely (80% by 2027)</li>
+                            <li>Competitive necessity ensures deployment</li>
+                        </ul>
+                    </div>
+                    <a href="robotics.html" class="article-link">Read Full Analysis →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="about-box">
+            <h2>About This Analysis</h2>
+            <p><strong>The Contrarian</strong> publishes contrarian financial and policy analysis grounded in primary sources, expert testimony, and data.</p>
+            <p>Our approach: Challenge consensus narratives by examining the evidence underneath. Question whether mainstream interpretation aligns with actual data. Look for where smart money and institutions lead, before retail catches on.</p>
+            <p>Each analysis is self-contained and citable. Read in any order. All sources are documented.</p>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2026 The Contrarian | Financial Analysis & Research | Published: <span class="footer-date">Loading...</span></p>
+    </footer>
+</body>
+</html>
